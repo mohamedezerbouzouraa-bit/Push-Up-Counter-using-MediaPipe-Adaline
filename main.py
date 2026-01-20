@@ -4,18 +4,16 @@ from models.adaline_sgd import AdalineSGD
 from vision.angle_utils import angle
 from data.training_data import xtr, ytr
 
-# ---------------- MediaPipe initialization ----------------
 ph = mp.solutions.pose
 pose = ph.Pose(static_image_mode=False,min_detection_confidence=0.5,min_tracking_confidence=0.5)
 
 mp_drawing = mp.solutions.drawing_utils
 mp_pose = mp.solutions.pose
 
-# ---------------- Train the model ----------------
+#nrainiw fel model(training the model )
 clf = AdalineSGD(eta=0.01, n_iter=50)
 clf.fit(xtr, ytr)
 
-# ---------------- Video capture ----------------
 cap = cv2.VideoCapture(0)
 count = 0
 previous_position = -1
