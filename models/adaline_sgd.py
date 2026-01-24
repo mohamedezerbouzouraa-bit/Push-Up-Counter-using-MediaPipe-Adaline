@@ -51,7 +51,6 @@ class AdalineSGD:
         return cost
 
     def net_input(self, X):
-        """Calculate net input."""
         return np.dot(X, self.w_[1:]) + self.w_[0]
 
     def activation(self, X):
