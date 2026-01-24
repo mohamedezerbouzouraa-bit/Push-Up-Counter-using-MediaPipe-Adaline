@@ -1,5 +1,4 @@
 import numpy as np
-
 class AdalineSGD:
     def __init__(self, eta=0.01, n_iter=50, shuffle=True, random_state=None):
         self.eta = eta
