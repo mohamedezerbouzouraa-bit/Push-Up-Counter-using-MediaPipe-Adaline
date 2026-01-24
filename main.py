@@ -17,7 +17,7 @@ clf.fit(xtr, ytr)
 cap = cv2.VideoCapture(0)
 count = 0
 previous_position = -1
-#supposina eli initialement -down-(we supposed that the initial position is downn)
+#supposina eli initialement -down-(we supposed that the initial position is down)
 
 while True:
     r, f = cap.read()
